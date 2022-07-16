@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - The WikiFinder for FreeCodeCamp</title>
+  <title>WikiSearch</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -12,9 +12,9 @@
     <nav class="findBar" ref="findBar" :style="showFindBar ? 'opacity:1':'opacity:0'">
       <input class="search" v-model="searchString" @keyup.enter="getWikiResults" type="text" name="Search" placeholder="Type and hit enter :)"
       />
-      <footer class="footer">coded with
+      <footer class="footer">Developed 
         <span class="love">&#9829; </span>by
-        <a href="https://twitter.com/yagoestevez/" alt="Yago Estévez's profile on Twitter" target="_blank">Yago Estévez</a>
+        <a href="https://www.megaflash.xyz" alt="MegaFlash XYZ homepage" target="_parent">MegaFlash XYZ</a>
       </footer>
     </nav>
     <transition name="fadeDisplay">
