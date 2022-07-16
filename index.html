@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - The WikiFinder for FreeCodeCamp</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main class="content">
+    <nav class="findBar" ref="findBar" :style="showFindBar ? 'opacity:1':'opacity:0'">
+      <input class="search" v-model="searchString" @keyup.enter="getWikiResults" type="text" name="Search" placeholder="Type and hit enter :)"
+      />
+      <footer class="footer">coded with
+        <span class="love">&#9829; </span>by
+        <a href="https://twitter.com/yagoestevez/" alt="Yago Estévez's profile on Twitter" target="_blank">Yago Estévez</a>
+      </footer>
+    </nav>
+    <transition name="fadeDisplay">
+      <section class="initDisplay" v-if="searching">
+        <h1 class="title" v-show="!searchString">Find in the Wiki</h1>
+        <h1 class="title" v-show="searchString">Find: {{ searchString }}</h1>
+        <p class="randomArticle">or just
+          <a href="https://en.wikipedia.org/wiki/Special:Random" alt="Random Article" target="_blank">click here</a> to read a random article</p>
+      </section>
+    </transition>
+    <transition name="fadeResults">
+      <section class="results" v-if="!searching">
+        <search-result v-for="wiki in orderEntries" :key="wiki.index" :title="wiki.title" :extract="wiki.extract" :image="wiki.thumbnail?wiki.thumbnail.source:''"
+          :link="getWikiURL( wiki.title )"></search-result>
+      </section>
+    </transition>
+  </main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

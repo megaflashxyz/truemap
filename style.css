@@ -1,0 +1,189 @@
+@import 'https://fonts.googleapis.com/css?family=Merriweather';
+/*
+ *  INITIAL STYLES
+ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #111;
+  color: #ddd;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #ddd;
+  background-image: url(../bg.jpg);
+  color: #111;
+  font-family: Merriweather, serif;
+  letter-spacing: 0.04rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+}
+body a:link,
+body a:visited {
+  text-decoration: none;
+  color: #111;
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
+body a:hover {
+  color: crimson;
+  text-decoration: none;
+}
+
+.content {
+  /*
+   *  FINDBAR
+   */
+  /*
+   *  DISPLAY
+   */
+  /*
+   *  RESULTS
+   */
+}
+.content .findBar {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s;
+}
+.content .findBar .search {
+  padding: 1rem;
+  font-family: Merriweather, serif;
+  font-size: 1.2rem;
+  color: #111;
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 25px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin: 1rem;
+}
+.content .findBar .footer {
+  padding: 0.3rem;
+  background-color: #111;
+  color: #eee;
+  font-size: 0.6rem;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+}
+.content .findBar .footer a:link,
+.content .findBar .footer a:visited {
+  text-decoration: none;
+  color: #eee;
+  transition: color 0.5s ease;
+}
+.content .findBar .footer a:hover {
+  color: crimson;
+}
+.content .findBar .footer .love {
+  color: crimson;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.content .initDisplay {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+}
+.content .initDisplay .title {
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  line-height: 2.2rem;
+}
+.content .initDisplay .randomArticle {
+  color: #333;
+  font-size: 0.8rem;
+}
+.content .results {
+  z-index: 0;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 2rem;
+}
+.content .results .result {
+  background-color: #eee;
+  padding: 1.5rem;
+  margin: 1rem;
+  flex: 1 1 20rem;
+  text-align: center;
+  border-left: 2px solid #333;
+  transition: all 0.2s ease-out;
+}
+.content .results .result:hover {
+  border-left: 2px solid crimson;
+}
+.content .results .result .image {
+  clip-path: circle(50% at 50% 50%);
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  transition: all 0.2s ease-out;
+}
+.content .results .result .image:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+.content .results .result .title {
+  margin: 0.5rem;
+}
+.content .results .result .extract {
+  text-align: justify;
+  hyphens: auto;
+  margin: 0.5rem;
+}
+.content .results .result .wikiLink {
+  margin: 2rem 0;
+}
+
+@media (max-width: 430px) {
+  .image {
+    width: 100px !important;
+    height: 100px !important;
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  .result {
+    padding: 0rem;
+    margin: 0rem;
+  }
+}
+/*
+ *  ANIMATIONS
+ */
+.fadeResults-enter {
+  opacity: 0;
+}
+
+.fadeResults-enter-active, .fadeResults-leave-active {
+  transition: opacity 2s;
+}
+
+.fadeResults-leave-to {
+  opacity: 0;
+}
+
+.fadeDisplay-enter {
+  opacity: 0;
+}
+
+.fadeDisplay-enter-active, .fadeDisplay-leave-active {
+  transition: opacity 1s;
+}
+
+.fadeDisplay-leave-to {
+  opacity: 0;
+}
