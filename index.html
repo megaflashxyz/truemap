@@ -8,20 +8,6 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-  <style>
-.button {
-  background-color: #fafafa;
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
 <main class="content">
     <nav class="findBar" ref="findBar" :style="showFindBar ? 'opacity:1':'opacity:0'">
       <input class="search" v-model="searchString" @keyup.enter="getWikiResults" type="text" name="Search" placeholder="Type and hit enter :)"
@@ -37,7 +23,7 @@
         <h1 class="title" v-show="searchString">Find: {{ searchString }}</h1>
         <p class="randomArticle">or just
           <a href="https://en.wikipedia.org/wiki/Special:Random" alt="Random Article" target="_blank">click here</a> to read a random article</p>
-        <center><a href="https://www.megaflash.xyz" class="button">Home</a></center>
+        <center><a href="https://www.megaflash.xyz"  target="_blank">Home</a></center>
       </section>
     </transition>
     <transition name="fadeResults">
