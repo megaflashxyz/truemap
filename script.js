@@ -8,7 +8,7 @@ Vue.component( 'search-result' , {
           <h2 class="title">{{ title }}</h2>
         </a>
         <p class="extract">{{ extract }}</p>
-        <a class="wikiLink" :href="link">Read more on Wikipedia about {{ title }}</a>.
+        <a class="wikiLink" :href="link">Read more about {{ title }}</a>.
     </article>
   `,
   props: [ 'title','extract','link','image' ]
