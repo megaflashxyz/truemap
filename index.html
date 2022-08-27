@@ -12,18 +12,14 @@
     <nav class="findBar" ref="findBar" :style="showFindBar ? 'opacity:1':'opacity:0'">
       <input class="search" v-model="searchString" @keyup.enter="getWikiResults" type="text" name="Search" placeholder="Type and hit enter :)"
       />
-      <footer class="footer">Developed 
-        <span class="love">&#9829; </span>by
-        <a href="https://www.megaflash.xyz" alt="MegaFlash XYZ homepage" target="_parent">MegaFlash XYZ</a>
+      <footer class="footer">
+        <a href="https://www.megaflash.xyz" alt="MegaFlash XYZ homepage" target="_parent">Home</a>
       </footer>
     </nav>
     <transition name="fadeDisplay">
       <section class="initDisplay" v-if="searching">
         <h1 class="title" v-show="!searchString">WikiSearch</h1>
         <h1 class="title" v-show="searchString">Find: {{ searchString }}</h1>
-        <p class="randomArticle">or just
-          <a href="https://en.wikipedia.org/wiki/Special:Random" alt="Random Article" target="_blank">click here</a> to read a random article</p>
-        <center><a href="https://www.megaflash.xyz"  target="_blank">Home</a></center>
       </section>
     </transition>
     <transition name="fadeResults">
