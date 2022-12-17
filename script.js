@@ -8,7 +8,6 @@ Vue.component( 'search-result' , {
           <h2 class="title">{{ title }}</h2>
         </a>
         <p class="extract">{{ extract }}</p>
-        <a class="wikiLink" :href="link"><b>Know more</b></a>.
     </article>
   `,
   props: [ 'title','extract','link','image' ]
@@ -35,7 +34,7 @@ const vue = new Vue( {
     },
     getWikiResults ( ) {
       this.wikiResults = [];
-      const URL  = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages|extracts&generator=search&piprop=name|thumbnail&pithumbsize=250&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrnamespace=0&rawcontinue&gsrlimit=20&origin=*&gsrsearch=${ this.searchString }`;
+      const URL  = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages|extracts&generator=search&piprop=name|thumbnail&pithumbsize=250&exsentences=2&exlimit=max&exintro=2&explaintext=1&gsrnamespace=0&rawcontinue&gsrlimit=20&origin=*&gsrsearch=${ this.searchString }`;
 
       axios.get( URL )
         .then( results => {
