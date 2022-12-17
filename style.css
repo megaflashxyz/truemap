@@ -33,7 +33,6 @@ body a:link,
 body a:visited {
   text-decoration: none;
   color: #111;
-  text-decoration: underline;
   transition: color 0.5s ease;
 }
 body a:hover {
