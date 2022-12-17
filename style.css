@@ -124,7 +124,6 @@ body a:hover {
   transition: all 0.2s ease-out;
 }
 .content .results .result:hover {
-  border-left: 2px solid crimson;
 }
 .content .results .result .image {
   clip-path: circle(50% at 50% 50%);
