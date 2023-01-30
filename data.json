@@ -1,4 +1,5 @@
-  "my name": ["Thanks for sharing, but I guess I'm not part of the select few who actually cares about your name.", "Well, I guess I missed the memo where everyone was supposed to ask for your name.", "Good to know, but I think I'll stick with calling you 'nameless one' from now on.", "Don't mind me, I'm just over here pretending I care about your name."],
+{
+    "my name": ["Thanks for sharing, but I guess I'm not part of the select few who actually cares about your name.", "Well, I guess I missed the memo where everyone was supposed to ask for your name.", "Good to know, but I think I'll stick with calling you 'nameless one' from now on.", "Don't mind me, I'm just over here pretending I care about your name."],
     "square root of 123": ["11.0905365064","Based on my code it's 11.0905365064", "So simple, the answer is 11.0905365064"],
     "korean": ["안녕 인간!", "안녕 불쌍한 인간!", "I don't know Korean, 죄송합니다"],
     "programm": ["JavaScript","it's JS"],
@@ -99,4 +100,6 @@
     "mp4": ["<video autoplay loop playsinline><source src='https://github.com/megaflashxyz/visual-stories-web/blob/main/assets/128805636074229034.mp4?raw=true' type='video/mp4'></video>"],
     "mp4mute": ["<video src='https://github.com/megaflashxyz/visual-stories-web/blob/main/assets/128805636074229034.mp4?raw=true' autoplay muted loop playsinline></video>"],
      "essay": ["Nature is the beautiful creation of the world. It is the most precious gift that we have been given by the creator. It includes everything that surrounds us like air, water, land, and sky. Nature is the most important thing that we need to survive.\n The beauty of nature is undeniable. The natural beauty of the world is what makes it worth living in. It can be seen in the different seasons of the year, the changing of the leaves in fall, the blossoming of flowers in spring, and the snow-capped mountains in winter. It is the beauty of nature that makes life worth living. \n Nature also plays a vital role in the balance of life on earth. The plants and animals in nature play a crucial role in maintaining the balance of the ecosystem. Without them, the earth would be uninhabitable for humans and other creatures. The balance of nature is important for the survival of life on earth. \n However, human activities have led to the destruction of nature. The pollution of air and water, deforestation, and the destruction of habitats have led to the extinction of many species of animals and plants. It is important that we take steps to protect nature and preserve it for future generations. We must learn to live in harmony with nature and not use it for our own selfish gain."],
-  "Goodbye": ["Goodbye!", "See you later!", "Farewell!", "Take care!", "Until next time!"],
+  "Goodbye": ["Goodbye!", "See you later!", "Farewell!", "Take care!", "Until next time!"]
+	
+}
